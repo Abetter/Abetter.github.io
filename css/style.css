@@ -18,7 +18,7 @@ body {
   padding: 50px 0;
   margin: 0;
   font: 14px/1.5 "Droid Serif", Helvetica Neue, Helvetica, Arial, sans-serif;
-  color: #555;
+  color: #222;
   font-weight: 300;
   background: url("images/bg.jpg") top left;
 }
@@ -563,7 +563,7 @@ article footer .tags:before {
   font-size: 1em;
   border-bottom: 1px solid #eee;
   font-weight: normal;
-  background: #069;
+  background: #333;
 }
 #sidebar .widget:first-child .title {
   -webkit-border-radius: 5px 5px 0 0;
@@ -580,7 +580,7 @@ article footer .tags:before {
   padding: 13px 5px 13px 15px;
 }
 #sidebar .widget .entry a:hover {
-  color: #222;
+  color: #003175;
 }
 #sidebar .widget ul,
 #sidebar .widget ol,
