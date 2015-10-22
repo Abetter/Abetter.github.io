@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>字符串处理总结 | 刘韬</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Abetter">
+  
+  
+    <meta name="description" content="文章中总结了一些python字符串处理总结，记录下来，以备后来参考。str=’python String function’生成字符串变量str=’python String function’字符串长度获取：len(str)例：print ‘%s length=%d’ % (str,len(str))">
+  
+  <meta name="description" content="文章中总结了一些python字符串处理总结，记录下来，以备后来参考。str=’python String function’生成字符串变量str=’python String function’字符串长度获取：len(str)例：print ‘%s length=%d’ % (str,len(str))">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串处理总结">
+<meta property="og:url" content="http://yoursite.com/2015/10/22/strings-md/index.html">
+<meta property="og:site_name" content="刘韬">
+<meta property="og:description" content="文章中总结了一些python字符串处理总结，记录下来，以备后来参考。str=’python String function’生成字符串变量str=’python String function’字符串长度获取：len(str)例：print ‘%s length=%d’ % (str,len(str))">
+<meta property="og:updated_time" content="2015-10-22T04:35:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="字符串处理总结">
+<meta name="twitter:description" content="文章中总结了一些python字符串处理总结，记录下来，以备后来参考。str=’python String function’生成字符串变量str=’python String function’字符串长度获取：len(str)例：print ‘%s length=%d’ % (str,len(str))">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">刘韬</a></h1>
+    <p><a href="/">丑橘靠心甜，庸人靠勤奋</a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">首页</a></li>
+      
+        <li><a href="/archives">存档</a></li>
+      
+        <li><a href="/reading">阅读</a></li>
+      
+        <li><a href="/about">关于</a></li>
+      
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2015/10/22/strings-md/">
+  <time datetime="2015-10-22T04:02:23.000Z">
+    2015-10-22
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">字符串处理总结</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>文章中总结了一些<strong>python</strong>字符串处理总结，记录下来，以备后来参考。<br>str=’python String function’<br>生成字符串变量str=’python String function’<br>字符串长度获取：len(str)<br>例：print ‘%s length=%d’ % (str,len(str))</p>
+<a id="more"></a>
+<h3 id="1-字符串函数处理">1.字符串函数处理</h3><h4 id="1-1_字母处理">1.1 字母处理</h4><p>   全部大写：<em>str.upper()</em><br>   全部小写：<em>str.lower()</em><br>   大小写互换：<em>str.swapcase()</em><br>   首字母大写，其余小写：<em>str.capitalize()</em><br>   首字母大写：<em>str.title()</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="string">'%s lower=%s'</span> % (str,str.lower())</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s upper=%s'</span> % (str,str.upper())</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s swapcase=%s'</span> % (str,str.swapcase())</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s capitalize=%s'</span> % (str,str.capitalize())</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s title=%s'</span> % (str,str.title())</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-2_格式化相关">1.2 格式化相关</h4><p>   获取固定长度，右对齐，左边不够用空格补齐：<em>str.ljust(width)</em><br>   获取固定长度，左对齐，右边不够用空格补齐：<em>str.ljust(width)</em><br>   获取固定长度，中间对齐，两边不够用空格补齐：<em>str.ljust(width)</em><br>   获取固定长度，右对齐，左边不足用0补齐<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="string">'%s ljust=%s'</span> % (str,str.ljust(<span class="number">20</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s rjust=%s'</span> % (str,str.rjust(<span class="number">20</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s center=%s'</span> % (str,str.center(<span class="number">20</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s zfill=%s'</span> % (str,str.zfill(<span class="number">20</span>))</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-3_字符串搜索相关">1.3 字符串搜索相关</h4><p>   搜索指定字符串，没有返回-1：<em>str.find(‘t’)</em><br>   指定起始位置搜索：<em>str.find(‘t’,start)</em><br>   指定起始及结束位置搜索：<em>str.find(‘t’,start,end)</em><br>   从右边开始查找：<em>str.rfind(‘t’)</em><br>   搜索到多少个指定字符串：<em>str.count(‘t’)</em><br>   上面所有方法都可用index代替，不同的是使用index查找不到会抛异常，而find返回-1<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="string">'%s find nono=%d'</span> % (str,str.find(<span class="string">'nono'</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s find t=%d'</span> % (str,str.find(<span class="string">'t'</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s find t from %d=%d'</span> % (str,<span class="number">1</span>,str.find(<span class="string">'t'</span>,<span class="number">1</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s find t from %d to %d=%d'</span> % (str,<span class="number">1</span>,<span class="number">2</span>,str.find(<span class="string">'t'</span>,<span class="number">1</span>,<span class="number">2</span>))</span><br><span class="line"><span class="comment">#print '%s index nono ' % (str,str.index('nono',1,2))</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s rfind t=%d'</span> % (str,str.rfind(<span class="string">'t'</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s count t=%d'</span> % (str,str.count(<span class="string">'t'</span>))</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-4_字符串替换相关">1.4 字符串替换相关</h4><p>   替换old为new：<em>str.replace(‘old’,’new’)</em><br>   替换指定次数的old为new：<em>str.replace(‘old’,’new’,maxReplaceTimes)</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> <span class="string">'%s replace t to *=%s'</span> % (str,str.replace(<span class="string">'t'</span>, <span class="string">'*'</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s replace t to *=%s'</span> % (str,str.replace(<span class="string">'t'</span>, <span class="string">'*'</span>,<span class="number">1</span>))</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-5_字符串去空格及去指定字符">1.5 字符串去空格及去指定字符</h4><p>   去两边空格：<em>str.strip()</em><br>   去左空格：<em>str.lstrip()</em><br>   去右空格：<em>str.rstrip()</em><br>   去两边字符串：<em>str.strip(‘d’)</em>，相应的也有lstrip，rstrip<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">' python String function '</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s strip=%s'</span> % (str,str.strip())</span><br><span class="line">str=<span class="string">'python String function'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s strip=%s'</span> % (str,str.strip(<span class="string">'d'</span>))</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-6_按指定字符分割字符串为数组：str-split(‘_‘)">1.6 按指定字符分割字符串为数组：<em>str.split(‘ ‘)</em></h4><p>   默认按空格分隔<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">'a b c de'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s strip=%s'</span> % (str,str.split())</span><br><span class="line">str=<span class="string">'a-b-c-de'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s strip=%s'</span> % (str,str.split(<span class="string">'-'</span>))</span><br></pre></td></tr></table></figure></p>
+<h4 id="1-7_字符串判断相关">1.7 字符串判断相关</h4><p>   是否以start开头：<em>str.startswith(‘start’)</em><br>   是否以end结尾：<em>str.endswith(‘end’)</em><br>   是否全为字母或数字：<em>str.isalnum()</em><br>   是否全字母：<em>str.isalpha()</em><br>   是否全数字：<em>str.isdigit()</em><br>   是否全小写：<em>str.islower()</em><br>   是否全大写：<em>str.isupper()</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">'python String function'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s startwith t=%s'</span> % (str,str.startswith(<span class="string">'t'</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s endwith d=%s'</span> % (str,str.endswith(<span class="string">'d'</span>))</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s isalnum=%s'</span> % (str,str.isalnum())</span><br><span class="line">str=<span class="string">'pythonStringfunction'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s isalnum=%s'</span> % (str,str.isalnum())</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s isalpha=%s'</span> % (str,str.isalpha())</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s isupper=%s'</span> % (str,str.isupper())</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s islower=%s'</span> % (str,str.islower())</span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s isdigit=%s'</span> % (str,str.isdigit())</span><br><span class="line">str=<span class="string">'3423'</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'%s isdigit=%s'</span> % (str,str.isdigit())</span><br></pre></td></tr></table></figure></p>
+
+    
+  </div>
+  <footer>
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+<section id="comment">
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2015/10/22/strings-md/" data-title="字符串处理总结" data-url="http://abetter.github.io/http://yoursite.com/2015/10/22/strings-md/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"abetter"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end --></section>
+
+</div>
+  </div>
+  
+  <div id="sidebar" class="widgets-right">
+  
+<div class="widget category">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/default/">default</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/python/" style="font-size: 10px;">python</a>
+  </div>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">最近文章</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2015/10/22/strings-md/">字符串处理总结</a>
+      </li>
+    
+      <li>
+        <a href="/2015/10/22/hello-world/">Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2015/10/20/python30skills/">30个python学习技巧</a>
+      </li>
+    
+      <li>
+        <a href="/2015/09/19/the-first-one/">markdown 简明教程</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+</div>
+  
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2015 <a href="/">Abetter</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//lib.sinaapp.com/js/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"Abetter"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+<div id="rightfix" style="display:none;">
+
+<a href="#comment" id="gocomm" class="fix_btn" title="提问/评论"><i><i></i></i></a>
+
+
+<a href="javascript:void(0)" id="gotop" class="fix_btn" onclick="gotop();" title="回到顶部"><i></i></a>
+<script>
+  function gotop(){
+    $('html,body').animate({
+        scrollTop : '0px'
+      }, 800);
+  }
+  $(function(){
+    _rightfix = $('#rightfix');
+    $(window).scroll(function(){
+      $sollTop = document.documentElement.scrollTop + document.body.scrollTop;
+      if($sollTop > 350){
+        _rightfix.show();
+      }else{
+        _rightfix.hide();
+      }
+    });
+  });
+</script>
+
+</div>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>
